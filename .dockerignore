@@ -1,0 +1,4 @@
+#using containerized build via github actions
+#docker ignore must still allow entire source tree
+target/classes
+.vscode

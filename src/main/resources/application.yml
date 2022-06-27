@@ -1,0 +1,19 @@
+#Configure Logging
+quarkus.log.level: INFO
+quarkus.log.category."org.gameontext.player".level: DEBUG
+quarkus.log.category."org.gameontext.player.control".level: DEBUG
+quarkus.log.category."org.gameontext.player.entity".level: DEBUG
+quarkus.log.category."org.gameontext.player.utils".level: DEBUG
+
+#Configure root path for quarkus (note, not honored by websocket registrations)
+quarkus.http.root-path: /players/v1
+#Configure port to be compatible with previous player service =)
+quarkus.http.port: 9080
+
+#Force health to paths compatible with GameOn
+quarkus.http.non-application-root-path: ${quarkus.http.root-path}
+quarkus.smallrye-health.root-path: health
+quarkus.smallrye-health.liveness-path: liveness
+
+#Ensure we're listening to all interfaces 
+quarkus.http.host: 0.0.0.0
