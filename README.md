@@ -36,7 +36,7 @@ This app requires the following env vars to be set.
 |JWT_PRIVATE_KEY| The private key for the JWT_PUBLIC_CERT as a multiline env var (eg, `-----BEGIN PRIVATE KEY-----` etc.. etc etc) used to re-sign tokens to invoke player service|
 |COUCHDB_USER| userid to talk to couchdb |
 |COUCHDB_PASSWORD| password to talk to couchdb |
-|COUCHDB_URL|url to talk to couchdb|
+|COUCHDB_SERVICE_URL|url to talk to couchdb|
 |SYSTEM_ID|the id to allow access to sensitive data with (probably `dummy:dummy.AnonymousUser` if testing locally), also used to access player service|
 |PLAYER_SERVICE_URL|url to talk to gameon player service|
 |MAP_KEY|the key used by this service, when talking to player service|
