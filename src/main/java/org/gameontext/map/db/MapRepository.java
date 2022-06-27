@@ -50,12 +50,10 @@ public class MapRepository {
 
     protected SiteDocuments sites;
 
-    protected ObjectMapper mapper;
-
     @PostConstruct
     protected void postConstruct() {
         // Create an ObjectMapper for marshalling responses back to REST clients
-        mapper = new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper();
 
         try {
             // Ensure required views exist
@@ -255,10 +253,6 @@ public class MapRepository {
         Site deleted = new Site();
         deleted.setId(id);
 
-    }
-
-    public ObjectMapper mapper() {
-        return mapper;
     }
 
     private boolean stripSensitiveData(ResourceAccessPolicy accessPolicy, String owner) {

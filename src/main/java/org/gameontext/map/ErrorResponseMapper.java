@@ -17,9 +17,6 @@ package org.gameontext.map;
 
 import java.util.logging.Level;
 
-import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
@@ -27,7 +24,6 @@ import javax.ws.rs.ext.Provider;
 
 import org.ektorp.DocumentNotFoundException;
 import org.ektorp.UpdateConflictException;
-import org.gameontext.map.db.MapRepository;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -35,19 +31,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 @Provider
-@ApplicationScoped
 public class ErrorResponseMapper implements ExceptionMapper<Exception> {
-
-    @Inject
-    protected MapRepository mapRepository;
 
     protected ObjectMapper mapper;
 
-    @PostConstruct
-    protected void postConstruct() {
-        mapper = mapRepository.mapper();
-        if ( mapper == null )
-            mapper = new ObjectMapper();
+    public ErrorResponseMapper(){
+        mapper = new ObjectMapper();
     }
 
     @Override
