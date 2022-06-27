@@ -6,8 +6,8 @@ quarkus.log.category."org.gameontext.player.entity".level: DEBUG
 quarkus.log.category."org.gameontext.player.utils".level: DEBUG
 
 #Configure root path for quarkus (note, not honored by websocket registrations)
-quarkus.http.root-path: /players/v1
-#Configure port to be compatible with previous player service =)
+quarkus.http.root-path: /map/v1
+#Configure port to be compatible with previous map service =)
 quarkus.http.port: 9080
 
 #Force health to paths compatible with GameOn
