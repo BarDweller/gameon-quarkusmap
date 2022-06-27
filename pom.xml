@@ -118,7 +118,7 @@
     <dependency>
       <groupId>com.github.bardweller</groupId>
       <artifactId>gameon-signed-quarkus</artifactId>
-      <version>-SNAPSHOT</version>
+      <version>v2.0.0</version>
     </dependency>     
     <dependency>
       <groupId>io.quarkus</groupId>
