@@ -1,5 +1,10 @@
 # Gameon Quarkus Map
 
+![Publish](https://github.com/bardweller/gameon-quarkusmap/actions/workflows/main.yml/badge.svg)
+![ReleaseDate](https://img.shields.io/github/release-date/bardweller/gameon-quarkusmap)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/bardweller/gameon-quarkusmap?display_name=release)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/bardweller/gameon-quarkusmap)
+
 A recreation of the GameOn Map service using Quarkus, rather than JEE.
 
 # Build instructions. 
