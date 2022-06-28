@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  * Wrapper for a single logger
  */
 public class Log {
-    private final static Logger log = Logger.getLogger("net.wasdev.gameon.map");
+    private final static Logger log = Logger.getLogger("org.gameontext.map");
     private final static Logger detailLog = Logger.getLogger("map.details");
 
     private static final String log_format = "%s: %s";

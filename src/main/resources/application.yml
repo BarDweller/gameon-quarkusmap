@@ -1,19 +1,35 @@
 #Configure Logging
-quarkus.log.level: INFO
-quarkus.log.category."org.gameontext.player".level: DEBUG
-quarkus.log.category."org.gameontext.player.control".level: DEBUG
-quarkus.log.category."org.gameontext.player.entity".level: DEBUG
-quarkus.log.category."org.gameontext.player.utils".level: DEBUG
+quarkus:
+  log:
+    level: INFO
+    min-level: TRACE
+    category:
+      "org.gameontext.map":
+        level: TRACE
+      "org.gameontext.map.auth":
+        level: TRACE
+      "org.gameontext.map.db":
+        level: TRACE
+      "org.gameontext.map.filter":
+        level: TRACE
+      "org.gameontext.map.model":
+        level: TRACE
+      "org.gameontext.signed":
+        level: TRACE        
 
 #Configure root path for quarkus (note, not honored by websocket registrations)
-quarkus.http.root-path: /map/v1
+  http:
+    root-path: /map
 #Configure port to be compatible with previous map service =)
-quarkus.http.port: 9080
+    port: 9080
+#Ensure we're listening to all interfaces 
+    host: 0.0.0.0    
 
 #Force health to paths compatible with GameOn
-quarkus.http.non-application-root-path: ${quarkus.http.root-path}
-quarkus.smallrye-health.root-path: health
-quarkus.smallrye-health.liveness-path: liveness
+    non-application-root-path: ${quarkus.http.root-path}
 
-#Ensure we're listening to all interfaces 
-quarkus.http.host: 0.0.0.0
+  smallrye-health:
+    root-path: health
+    liveness-path: liveness
+
+
